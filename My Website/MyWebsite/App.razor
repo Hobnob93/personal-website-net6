@@ -1,0 +1,28 @@
+﻿<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+        <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <MudContainer>
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h4" Color="Color.Error">Not Found!</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>The page you are looking for could not be found.</MudText>
+                        <br/>
+                        <MudText>
+                            This might be due to the page being in development still, or perhaps a dead link.
+                            Please don't hesitate to contact me about broken links within the website; it would be much appreciated.
+                        </MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudContainer>
+        </LayoutView>
+    </NotFound>
+</Router>
