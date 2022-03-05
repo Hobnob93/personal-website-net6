@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4459b878-8eab-43b7-a630-d5f470f70e2a" name="Changes" comment="" />
+    <list default="true" id="4459b878-8eab-43b7-a630-d5f470f70e2a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.My Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My Website/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWebsite/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/App.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWebsite/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/Pages/Index.razor" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +100,7 @@
       <workItem from="1645982618819" duration="749000" />
       <workItem from="1645983667816" duration="1758000" />
       <workItem from="1646318953749" duration="1799000" />
-      <workItem from="1646468582023" duration="2504000" />
+      <workItem from="1646468582023" duration="3582000" />
     </task>
     <servers />
   </component>
