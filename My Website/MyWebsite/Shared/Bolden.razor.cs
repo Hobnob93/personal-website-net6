@@ -8,5 +8,5 @@ public partial class Bolden
     [Parameter] public bool MakeBold { get; set; } = true;
     [Parameter] public string Text { get; set; } = "<bold text not provided>";
     
-    [Parameter] public RenderFragment ChildContent {get;set;}
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 }
