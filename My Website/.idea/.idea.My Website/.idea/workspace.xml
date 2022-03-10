@@ -11,9 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4459b878-8eab-43b7-a630-d5f470f70e2a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My Website/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyWebsite/MyWebsite.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/MyWebsite.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyWebsite/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWebsite/Shared/Bolden.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/Shared/Bolden.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyWebsite/Shared/Bolden.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/Shared/Bolden.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyWebsite/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/Shared/NavMenu.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +113,8 @@
       <workItem from="1646318953749" duration="1799000" />
       <workItem from="1646468582023" duration="3582000" />
       <workItem from="1646554121415" duration="1694000" />
-      <workItem from="1646670317919" duration="481000" />
+      <workItem from="1646670317919" duration="1637000" />
+      <workItem from="1646905126193" duration="1141000" />
     </task>
     <servers />
   </component>
