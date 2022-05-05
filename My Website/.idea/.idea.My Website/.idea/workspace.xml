@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4459b878-8eab-43b7-a630-d5f470f70e2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MyWebsite/wwwroot/images/SFAS/SFAS W2017 Winners.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyWebsite/wwwroot/images/SFAS/SWA Ability.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.My Website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.My Website/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyWebsite/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyWebsite/wwwroot/icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyWebsite/wwwroot/icon-192.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
       <workItem from="1646554121415" duration="1694000" />
       <workItem from="1646670317919" duration="1637000" />
       <workItem from="1646905126193" duration="4942000" />
-      <workItem from="1646923325654" duration="3445000" />
+      <workItem from="1646923325654" duration="8686000" />
     </task>
     <servers />
   </component>
