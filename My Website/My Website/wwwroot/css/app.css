@@ -5,8 +5,8 @@
     --font-highlight-color: #8ac8a5;
     --navbar-color: #27272f;
     --background-color: #32333d;
-    --h1-size: 1.6rem;
-    --h2-size: 1.4rem;
+    --h1-size: 1.5rem;
+    --h2-size: 1.35rem;
     --h3-size: 1.2rem;
     --h4-size: 1.1rem;
     --h5-size: 1.05rem;
@@ -137,7 +137,7 @@ h6 {
 
 .wip-dev::before {
     background: var(--background-color);
-    animation: typewriter 2s steps(21) 3.5s forwards;
+    animation: typewriter 2s steps(21) 4s forwards;
 }
 
 .wip-dev::after {
@@ -145,14 +145,14 @@ h6 {
     opacity: 0;
     background: var(--font-highlight-color);
     animation: 
-        typewriter 2s steps(21) 3.5s forwards,
         blink 250ms steps(21) 3.5s infinite,
-        blink 500ms ease 5.5s forwards;
+        typewriter 2s steps(21) 4s forwards,
+        blink 500ms ease 6s forwards;
 }
 
 .wip-msg::before {
     background: rgba(39, 39, 47, 1);
-    animation: typewriter 1s steps(18) 6s forwards;
+    animation: typewriter 1s steps(18) 7.5s forwards;
 }
 
 .wip-msg::after {
@@ -160,9 +160,9 @@ h6 {
     opacity: 0;
     background: var(--font-secondary-color);
     animation: 
-        typewriter 1s steps(18) 6s forwards,
-        blink 250ms steps(18) 6s infinite,
-        blink 500ms ease 7s forwards;
+        blink 250ms steps(18) 7s infinite,
+        typewriter 1s steps(18) 7.5s forwards,
+        blink 500ms ease 8s forwards;
 }
 
 @keyframes typewriter {
