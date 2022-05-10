@@ -1,6 +1,6 @@
 ﻿#loading-body {
     margin: 0;
-    background: radial-gradient(#27272f, #32333d);
+    background: #32333d;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -5,12 +5,12 @@
     --font-highlight-color: #8ac8a5;
     --navbar-color: #27272f;
     --background-color: #32333d;
-    --h1-size: 2.2rem;
-    --h2-size: 1.8rem;
-    --h3-size: 1.5rem;
-    --h4-size: 1.2rem;
-    --h5-size: 1.0rem;
-    --h6-size: 0.9rem;
+    --h1-size: 1.6rem;
+    --h2-size: 1.4rem;
+    --h3-size: 1.2rem;
+    --h4-size: 1.1rem;
+    --h5-size: 1.05rem;
+    --h6-size: 1.0rem;
 }
 
 
@@ -79,19 +79,21 @@ h6 {
 
 .wip-welcome {
     position: absolute;
-    display: inline;
     top: -5rem;
     left: 50%;
     color: var(--font-primary-color);
     transform: translate(-50%, 0%);
     width: fit-content;
+    block-size: fit-content;
+    font-family: "Source Code Pro", monospace;
 }
 
 .wip-dev {
     position: absolute;
-    top: -2.25rem;
+    top: -2.75rem;
     right: 0;
     color: var(--font-highlight-color);
+    font-family: "Source Code Pro", monospace;
 }
 
 .wip-msg {
@@ -100,4 +102,80 @@ h6 {
     right: 50%;
     color: var(--font-secondary-color);
     transform: translate(50%, -50%);
+    font-family: "Source Code Pro", monospace;
+    width: fit-content;
+}
+
+.wip-welcome::before,
+.wip-welcome::after,
+.wip-dev::before,
+.wip-dev::after,
+.wip-msg::before,
+.wip-msg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.wip-welcome::before {
+    background: var(--background-color);
+    animation: typewriter 2s steps(24) 1s forwards;
+}
+
+.wip-welcome::after {
+    width: 0.2rem;
+    opacity: 0;
+    background: var(--font-primary-color);
+    animation: 
+        typewriter 2s steps(24) 1s forwards,
+        blink 250ms steps(24) infinite,
+        blink 500ms ease 3s forwards
+}
+
+.wip-dev::before {
+    background: var(--background-color);
+    animation: typewriter 2s steps(21) 3.5s forwards;
+}
+
+.wip-dev::after {
+    width: 0.2rem;
+    opacity: 0;
+    background: var(--font-highlight-color);
+    animation: 
+        typewriter 2s steps(21) 3.5s forwards,
+        blink 250ms steps(21) 3.5s infinite,
+        blink 500ms ease 5.5s forwards;
+}
+
+.wip-msg::before {
+    background: rgba(39, 39, 47, 1);
+    animation: typewriter 1s steps(18) 6s forwards;
+}
+
+.wip-msg::after {
+    width: 0.2rem;
+    opacity: 0;
+    background: var(--font-secondary-color);
+    animation: 
+        typewriter 1s steps(18) 6s forwards,
+        blink 250ms steps(18) 6s infinite,
+        blink 500ms ease 7s forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to { 
+        opacity: 0;
+    }
 }
