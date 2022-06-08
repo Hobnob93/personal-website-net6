@@ -15,6 +15,10 @@
 
 
 /* Blazor Specific */
+body {
+    background-color: var(--background-color);
+}
+
 .invalid {
     outline: 1px solid red;
 }
@@ -77,31 +81,40 @@ h6 {
     font-size: var(--h6-size);
 }
 
+.wip-content {
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+
 .wip-welcome {
     position: absolute;
-    top: -5rem;
+    display: inline;
     left: 50%;
     color: var(--font-primary-color);
-    transform: translate(-50%, 0%);
     width: fit-content;
     block-size: fit-content;
+    transform: translate(-45%, 0);
     font-family: "Source Code Pro", monospace;
 }
 
 .wip-dev {
-    position: absolute;
-    top: -2.75rem;
-    right: 0;
+    position: relative;
+    display: inline;
+    top: 8%;
+    right: -50%;
     color: var(--font-highlight-color);
     font-family: "Source Code Pro", monospace;
 }
 
 .wip-msg {
     position: absolute;
-    top: 50%;
-    right: 50%;
+    display: inline;
+    bottom: 0;
+    left: 50%;
     color: var(--font-secondary-color);
-    transform: translate(50%, -50%);
+    transform: translate(-50%, 0);
     font-family: "Source Code Pro", monospace;
     width: fit-content;
 }
@@ -151,7 +164,7 @@ h6 {
 }
 
 .wip-msg::before {
-    background: rgba(39, 39, 47, 1);
+    background: var(--background-color);
     animation: typewriter 1s steps(18) 7.5s forwards;
 }
 
