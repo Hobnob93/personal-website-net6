@@ -1,6 +1,6 @@
 ﻿.loading-body {
     margin: 0;
-    background: #32333d;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
