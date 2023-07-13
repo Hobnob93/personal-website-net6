@@ -15,4 +15,9 @@
       <Folder Include="wwwroot\css\images\logo\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Website.Components\Website.Components.csproj" />
+      <ProjectReference Include="..\Website.Store\Website.Store.csproj" />
+    </ItemGroup>
+
 </Project>

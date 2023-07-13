@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website", "Website\Website.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Components", "Website.Components\Website.Components.csproj", "{FFEC3CD6-1191-4369-AB73-CC0C75A75028}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Store", "Website.Store\Website.Store.csproj", "{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +23,15 @@ Global
 		{FFEC3CD6-1191-4369-AB73-CC0C75A75028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFEC3CD6-1191-4369-AB73-CC0C75A75028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFEC3CD6-1191-4369-AB73-CC0C75A75028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6CB3D6F-0EA3-4991-97F7-B09097857269}
 	EndGlobalSection
 EndGlobal
