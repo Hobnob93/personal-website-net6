@@ -1,9 +1,12 @@
 ﻿:root {
+    --mouse-x: -1000;
+    --mouse-y: -1000;
     --font-primary-color: #ffffffff;
     --font-secondary-color: #5996e2;
     --font-highlight-color: #8ac8a5;
     --navbar-color: #27272f;
-    --background-color: #101110;
+    --background-color: #002020;
+    --mouse-tracking-color: #003333;
     --h0-size: 5.0rem;
     --h1-size: 1.5rem;
     --h2-size: 1.35rem;
