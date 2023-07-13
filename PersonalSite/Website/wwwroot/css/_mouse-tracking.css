@@ -1,6 +1,5 @@
 ﻿.mouse-cursor-gradient {
     position: relative;
-    overflow: hidden;
 }
 
     .mouse-cursor-gradient:before {

@@ -12,22 +12,48 @@
     display: none;
 }
 
+.loading-content {
+    margin: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    aspect-ratio: 1;
+}
+
+.loading-content.done {
+    display: none;
+}
+
 .loading-logo {
     display: block;
     width: 22rem;
     height: 22rem;
 }
 
-/* Animation of the logo */
 .logo-outline {
     stroke-width: 3;
     stroke-dasharray: 250;
     fill-opacity: 0;
-    animation: dash 1.5s linear infinite;
+    animation: large-dash 1.5s linear infinite;
 }
 
-@keyframes dash {
+@keyframes large-dash {
     to {
         stroke-dashoffset: 500;
+    }
+}
+
+.loading-content-outline {
+    stroke-width: 2;
+    stroke-dasharray: 75;
+    fill-opacity: 0;
+    animation: small-dash 0.75s linear infinite;
+}
+
+@keyframes small-dash {
+    to {
+        stroke-dashoffset: 150;
     }
 }
