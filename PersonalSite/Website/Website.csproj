@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Website.Common\Website.Common.csproj" />
       <ProjectReference Include="..\Website.Components\Website.Components.csproj" />
       <ProjectReference Include="..\Website.Store\Website.Store.csproj" />
     </ItemGroup>

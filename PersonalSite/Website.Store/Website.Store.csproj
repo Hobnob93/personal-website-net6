@@ -19,4 +19,8 @@
     <Folder Include="Reducers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Website.Common\Website.Common.csproj" />
+  </ItemGroup>
+
 </Project>
