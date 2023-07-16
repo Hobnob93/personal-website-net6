@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "My Website": {
+    "Website": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

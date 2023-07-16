@@ -5,15 +5,15 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website", "Website\Website.csproj", "{C2C96E58-2E25-4F71-8BE9-F096C459A2DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Components", "Website.Components\Website.Components.csproj", "{FFEC3CD6-1191-4369-AB73-CC0C75A75028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website.Components", "Website.Components\Website.Components.csproj", "{FFEC3CD6-1191-4369-AB73-CC0C75A75028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Store", "Website.Store\Website.Store.csproj", "{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website.Store", "Website.Store\Website.Store.csproj", "{91234B4C-35AE-4A21-B2E8-CD7F840DA67B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Common", "Website.Common\Website.Common.csproj", "{E2C1EE5A-55D2-4DB4-9D00-74ABB971C5EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website.Common", "Website.Common\Website.Common.csproj", "{E2C1EE5A-55D2-4DB4-9D00-74ABB971C5EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Store.Tests", "Website.Store.Tests\Website.Store.Tests.csproj", "{5FA07899-751B-4704-AFD4-87B657B5D17E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website.Store.Tests", "Website.Store.Tests\Website.Store.Tests.csproj", "{5FA07899-751B-4704-AFD4-87B657B5D17E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website.Common.Tests", "Website.Common.Tests\Website.Common.Tests.csproj", "{FA3B797C-4D6B-49E7-826E-8CC4E1890422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website.Common.Tests", "Website.Common.Tests\Website.Common.Tests.csproj", "{FA3B797C-4D6B-49E7-826E-8CC4E1890422}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8D9EB5E8-B81B-46F1-956C-A9A47487D3B3}"
 EndProject

@@ -4,10 +4,7 @@
 @import "_loading.css";
 @import "_blazor.css";
 @import "_mouse-tracking.css";
-
-#app {
-    min-height: 100vh;
-}
+@import "_layout.css";
 
 body {
     background-color: var(--background-color);
