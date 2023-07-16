@@ -1,8 +1,8 @@
 ﻿@page "/"
 
 <Hero>
-    <div class="d-flex flex-column h-100pc">
-        <div class="d-flex flex-grow-1">
+    <FlexBox IsColumn FullHeight>
+        <FlexBox Class="flex-grow-1">
             <div class="flex-grow-1">
                 <h1 class="hero-tile-text">C</h1>
             </div>
@@ -15,8 +15,9 @@
             <div class="flex-grow-1">
                 <h1 class="hero-tile-text">E</h1>
             </div>
-        </div>
-        <div class="d-flex flex-grow-1">
+        </FlexBox>
+
+        <FlexBox Class="flex-grow-1">
             <div class="flex-grow-1">
                 <h1 class="hero-tile-text">D</h1>
             </div>
@@ -29,6 +30,6 @@
             <div class="flex-grow-1">
                 <h1 class="hero-tile-text">E</h1>
             </div>
-        </div>
-    </div>
+        </FlexBox>
+    </FlexBox>
 </Hero>
