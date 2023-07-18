@@ -28,9 +28,50 @@ h6 {
 }
 
 .hero-tile-text {
-    font-size: var(--tile-font-size);
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%)
+    fill: transparent;
+    stroke: var(--font-primary-color);
+    stroke-width: 0.01em;
+    stroke-linejoin: round;
+}
+
+/* Extra small devices like small phones */
+@media only screen and (max-width: 600px) {
+    .hero-tile-text {
+        font-size: 100px;
+    }
+}
+
+/* Small devices like portrait tablets and landscape phones */
+@media only screen and (min-width: 600px) {
+    .hero-tile-text {
+        font-size: 120px;
+    }
+}
+
+/* Medium devices like landscape tablets */
+@media only screen and (min-width: 768px) {
+    .hero-tile-text {
+        font-size: 140px;
+    }
+}
+
+/* Medium devices like landscape tablets */
+@media only screen and (min-width: 992px) {
+    .hero-tile-text {
+        font-size: 160px;
+    }
+}
+
+/* Large devices such as laptops and desktops */
+@media only screen and (min-width: 992px) {
+    .hero-tile-text {
+        font-size: 180px;
+    }
+}
+
+/* Extra large devices such as large laptops and desktops */
+@media only screen and (min-width: 1200px) {
+    .hero-tile-text {
+        font-size: 200px;
+    }
 }

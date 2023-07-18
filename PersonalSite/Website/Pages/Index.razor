@@ -1,18 +1,24 @@
 ﻿@page "/"
 
 <Hero>
-    <FlexBox IsColumn FullHeight>
-        <FlexBox Class="flex-grow-1">
+    <FlexBox FullHeight>
+        <FlexBox IsColumn Class="hero-column">
             <HeroTile Text="C" />
-            <HeroTile Text="O" />
             <HeroTile Text="D" />
-            <HeroTile Text="E" />
         </FlexBox>
 
-        <FlexBox Class="flex-grow-1">
-            <HeroTile Text="D" />
+        <FlexBox IsColumn Class="hero-column">
+            <HeroTile Text="O" />
             <HeroTile Text="U" />
+        </FlexBox>
+
+        <FlexBox IsColumn Class="hero-column">
             <HeroTile Text="D" />
+            <HeroTile Text="D" />
+        </FlexBox>
+
+        <FlexBox IsColumn Class="hero-column">
+            <HeroTile Text="E" />
             <HeroTile Text="E" />
         </FlexBox>
     </FlexBox>
