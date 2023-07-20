@@ -22,6 +22,10 @@
 
 .hero-tile {
     overflow: hidden;
-    width: 25vw;
     height: var(--hero-tile-height);
+}
+
+.hero-column {
+    float: left;
+    width: 25%;
 }
