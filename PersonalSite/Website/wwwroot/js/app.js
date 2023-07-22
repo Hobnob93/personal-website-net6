@@ -1,12 +1,9 @@
-let div = document.querySelector('.mouse-cursor-gradient');
-div.addEventListener('mousemove', e => {
-    let x = e.clientX;
-    let y = e.clientY;
-    div.style.setProperty('--mouse-x', x + 'px');
-    div.style.setProperty('--mouse-y', y + 'px');
+$(document).on('mousemove', function (e) {
+    document.documentElement.style.setProperty('--mouse-x', e.pageX + 'px');
+    document.documentElement.style.setProperty('--mouse-y', e.pageY + 'px');
 });
 
-function randomlySizeHeroColumns() {
+function randomlySizeHeroTiles() {
     for (let i = 0; i < 4; i++) {
         var top = document.querySelector('.hero-tile.top.left-' + i);
         var bottom = document.querySelector('.hero-tile.bottom.left-' + i);
@@ -21,4 +18,32 @@ function randomlySizeHeroColumns() {
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function initialiseHeroTileEvents() {
+    $('.hero-tile').mouseenter(function () {
+        let target = $(this);
+        let topBottomClass = (target.hasClass('top') ? 'top' : 'bottom');
+
+        $('.hero-tile.' + topBottomClass).each(function () {
+            console.log('loop');
+            let loopTarget = $(this);
+
+            if (loopTarget.is(target) === false) {
+                loopTarget.find('.hero-tile-text').addClass('hide');
+            }
+        });
+    });
+
+    $('.hero-tile').mouseleave(function () {
+        let topBottomClass = ($(this).hasClass('top') ? 'top' : 'bottom');
+        $('.hero-tile.' + topBottomClass).each(function () {
+            $(this).find('.hero-tile-text').removeClass('hide');
+        });
+    });
+}
+
+function setupHeroTiles() {
+    randomlySizeHeroTiles();
+    initialiseHeroTileEvents();
 }
