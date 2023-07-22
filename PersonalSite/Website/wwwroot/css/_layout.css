@@ -21,6 +21,98 @@
     height: 100%;
 }
 
+@keyframes criss-cross-left {
+    0% {
+        left: -20px;
+    }
+
+    50% {
+        left: 50%;
+        width: 20px;
+        height: 150%;
+    }
+
+    75% {
+        border-radius: 50%;
+    }
+
+    100% {
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@keyframes criss-cross-right {
+    0% {
+        right: -20px;
+    }
+
+    50% {
+        right: 50%;
+        width: 20px;
+        height: 150%;
+    }
+
+    75% {
+        border-radius: 50%;
+    }
+
+    100% {
+        right: 50%;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@-webkit-keyframes criss-cross-left {
+    0% {
+        left: -20px;
+    }
+
+    50% {
+        left: 50%;
+        width: 20px;
+        height: 150%;
+    }
+
+    75% {
+        border-radius: 50%;
+    }
+
+    100% {
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@-webkit-keyframes criss-cross-right {
+    0% {
+        right: -20px;
+    }
+
+    50% {
+        right: 50%;
+        width: 20px;
+        height: 150%;
+    }
+
+    75% {
+        border-radius: 50%;
+    }
+
+    100% {
+        right: 50%;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
 .hero-tile {
     overflow: hidden;
     width: 25vw;
@@ -33,23 +125,40 @@
         left 0.5s ease-in-out;
 }
 
-    .hero-tile span {
+    .hero-tile:before, .hero-tile:after {
         position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
+        top: 50%;
+        content: '';
+        width: 20px;
+        height: 20px;
         background-color: var(--tile-gb-color);
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        transition: 
-            width 0.4s ease-in-out,
-            height 0.4s ease-in-out;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
     }
 
-    .hero-tile:hover span {
-        width: 500%;
-        height: 500%;
+    .hero-tile:before {
+        left: -20px;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-tile:after {
+        right: -20px;
+        transform: translate(50%, -50%);
+    }
+
+    .hero-tile:hover:before {
+        -webkit-animation: criss-cross-left 1.5s both;
+        -webkit-animation-direction: alternate;
+        animation: criss-cross-left 0.5s both;
+        animation-direction: alternate;
+    }
+
+    .hero-tile:hover:after {
+        -webkit-animation: criss-cross-right 1.5s both;
+        -webkit-animation-direction: alternate;
+        animation: criss-cross-right 0.5s both;
+        animation-direction: alternate;
     }
 
     .hero-tile.top {

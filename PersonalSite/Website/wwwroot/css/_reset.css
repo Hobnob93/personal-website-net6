@@ -7,6 +7,12 @@
     overflow-y: auto;
 }
 
+*:before, *:after {
+    z-index: -1;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }

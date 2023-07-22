@@ -8,7 +8,7 @@ function randomlySizeHeroTiles() {
         var top = document.querySelector('.hero-tile.top.left-' + i);
         var bottom = document.querySelector('.hero-tile.bottom.left-' + i);
 
-        var topHeight = randomIntFromInterval(40, 60);
+        var topHeight = randomIntFromInterval(41, 59);
         var bottomHeight = 100 - topHeight;
 
         top.style.setProperty('--hero-tile-height', topHeight + 'vh');
@@ -33,24 +33,12 @@ function initialiseHeroTileEvents() {
                     loopTarget.addClass('hide');
                 }
             });
-
-            var parentOffset = $(this).offset(),
-                relX = e.pageX - parentOffset.left,
-                relY = e.pageY - parentOffset.top;
-
-            $(this).find('span').css({ top: relY, left: relX })
         })
         .mouseleave(function (e) {
             let topBottomClass = ($(this).hasClass('top') ? 'top' : 'bottom');
             $('.hero-tile.' + topBottomClass).each(function () {
                 $(this).removeClass('hide');
             });
-
-            var parentOffset = $(this).offset(),
-                relX = e.pageX - parentOffset.left,
-                relY = e.pageY - parentOffset.top;
-
-            $(this).find('span').css({ top: relY, left: relX })
         });
 }
 
