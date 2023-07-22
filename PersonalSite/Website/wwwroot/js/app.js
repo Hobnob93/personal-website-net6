@@ -7,14 +7,16 @@ div.addEventListener('mousemove', e => {
 });
 
 function randomlySizeHeroColumns() {
-    let heroColumns = document.querySelectorAll('.hero-column');
-    heroColumns.forEach(column => {
+    for (let i = 0; i < 4; i++) {
+        var top = document.querySelector('.hero-tile.top.left-' + i);
+        var bottom = document.querySelector('.hero-tile.bottom.left-' + i);
+
         var topHeight = randomIntFromInterval(40, 60);
         var bottomHeight = 100 - topHeight;
 
-        column.children[0].style.setProperty('--hero-tile-height', topHeight + 'vh');
-        column.children[1].style.setProperty('--hero-tile-height', bottomHeight + 'vh');
-    });
+        top.style.setProperty('--hero-tile-height', topHeight + 'vh');
+        bottom.style.setProperty('--hero-tile-height', bottomHeight + 'vh');
+    }
 }
 
 function randomIntFromInterval(min, max) { // min and max included 
