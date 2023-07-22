@@ -32,33 +32,50 @@
         left 0.5s ease-in-out;
 }
 
-.hero-tile.top {
-    top: 0;
-}
+    .hero-tile span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: var(--tile-gb-color);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    }
 
-.hero-tile.bottom {
-    bottom: 0;
-}
+    .hero-tile:hover span {
+        width: 500%;
+        height: 500%;
+    }
 
-.hero-tile.left-0 {
-    left: 0;
-}
+    .hero-tile.top {
+        top: 0;
+    }
 
-.hero-tile.left-1 {
-    left: 25vw;
-}
+    .hero-tile.bottom {
+        bottom: 0;
+    }
 
-.hero-tile.left-2 {
-    left: 50vw;
-}
+    .hero-tile.left-0 {
+        left: 0;
+    }
 
-.hero-tile.left-3 {
-    left: 75vw;
-}
+    .hero-tile.left-1 {
+        left: 25vw;
+    }
 
-.hero-tile:hover {
-    cursor: pointer;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
+    .hero-tile.left-2 {
+        left: 50vw;
+    }
+
+    .hero-tile.left-3 {
+        left: 75vw;
+    }
+
+    .hero-tile:hover {
+        cursor: pointer;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }

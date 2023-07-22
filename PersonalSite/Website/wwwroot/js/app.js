@@ -21,26 +21,37 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 
 function initialiseHeroTileEvents() {
-    $('.hero-tile').mouseenter(function () {
-        let target = $(this);
-        let topBottomClass = (target.hasClass('top') ? 'top' : 'bottom');
+    $('.hero-tile')
+        .mouseenter(function (e) {
+            let target = $(this);
+            let topBottomClass = (target.hasClass('top') ? 'top' : 'bottom');
 
-        $('.hero-tile.' + topBottomClass).each(function () {
-            console.log('loop');
-            let loopTarget = $(this);
+            $('.hero-tile.' + topBottomClass).each(function () {
+                let loopTarget = $(this);
 
-            if (loopTarget.is(target) === false) {
-                loopTarget.find('.hero-tile-text').addClass('hide');
-            }
+                if (loopTarget.is(target) === false) {
+                    loopTarget.addClass('hide');
+                }
+            });
+
+            var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+
+            $(this).find('span').css({ top: relY, left: relX })
+        })
+        .mouseleave(function (e) {
+            let topBottomClass = ($(this).hasClass('top') ? 'top' : 'bottom');
+            $('.hero-tile.' + topBottomClass).each(function () {
+                $(this).removeClass('hide');
+            });
+
+            var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+
+            $(this).find('span').css({ top: relY, left: relX })
         });
-    });
-
-    $('.hero-tile').mouseleave(function () {
-        let topBottomClass = ($(this).hasClass('top') ? 'top' : 'bottom');
-        $('.hero-tile.' + topBottomClass).each(function () {
-            $(this).find('.hero-tile-text').removeClass('hide');
-        });
-    });
 }
 
 function setupHeroTiles() {
