@@ -32,7 +32,7 @@ h6 {
     stroke: var(--font-primary-color);
     stroke-width: 0.01em;
     stroke-linejoin: round;
-    transition: stroke 0.5s ease-in-out;
+    transition: stroke var(--tile-anim-speed) ease-in-out;
 }
 
 .hero-tile.hide .hero-tile-text {

@@ -120,9 +120,9 @@
     position: absolute;
     z-index: 1;
     transition:
-        width 0.5s ease-in-out,
-        height 0.5s ease-in-out,
-        left 0.5s ease-in-out;
+        width var(--tile-anim-speed) ease-in-out,
+        height var(--tile-anim-speed) ease-in-out,
+        left var(--tile-anim-speed) ease-in-out;
 }
 
     .hero-tile:before, .hero-tile:after {
@@ -148,16 +148,16 @@
     }
 
     .hero-tile:hover:before {
-        -webkit-animation: criss-cross-left 1.5s both;
+        -webkit-animation: criss-cross-left var(--tile-anim-speed) both;
         -webkit-animation-direction: alternate;
-        animation: criss-cross-left 0.5s both;
+        animation: criss-cross-left var(--tile-anim-speed) both;
         animation-direction: alternate;
     }
 
     .hero-tile:hover:after {
-        -webkit-animation: criss-cross-right 1.5s both;
+        -webkit-animation: criss-cross-right var(--tile-anim-speed) both;
         -webkit-animation-direction: alternate;
-        animation: criss-cross-right 0.5s both;
+        animation: criss-cross-right var(--tile-anim-speed) both;
         animation-direction: alternate;
     }
 
