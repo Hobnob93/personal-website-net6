@@ -4,9 +4,9 @@ $(document).on('mousemove', function (e) {
 });
 
 function randomlySizeHeroTiles() {
-    for (let i = 0; i < 4; i++) {
-        var top = document.querySelector('.hero-tile.top.left-' + i);
-        var bottom = document.querySelector('.hero-tile.bottom.left-' + i);
+    for (let i = 1; i <= 4; i++) {
+        var top = document.querySelector('.hero-tile.first-word.letter-' + i);
+        var bottom = document.querySelector('.hero-tile.second-word.letter-' + i);
 
         var topHeight = randomIntFromInterval(41, 59);
         var bottomHeight = 100 - topHeight;
@@ -24,7 +24,7 @@ function initialiseHeroTileEvents() {
     $('.hero-tile')
         .mouseenter(function (e) {
             let target = $(this);
-            let topBottomClass = (target.hasClass('top') ? 'top' : 'bottom');
+            let topBottomClass = (target.hasClass('first-word') ? 'first-word' : 'second-word');
 
             $('.hero-tile.' + topBottomClass).each(function () {
                 let loopTarget = $(this);
@@ -35,7 +35,7 @@ function initialiseHeroTileEvents() {
             });
         })
         .mouseleave(function (e) {
-            let topBottomClass = ($(this).hasClass('top') ? 'top' : 'bottom');
+            let topBottomClass = ($(this).hasClass('first-word') ? 'first-word' : 'second-word');
             $('.hero-tile.' + topBottomClass).each(function () {
                 $(this).removeClass('hide');
             });

@@ -42,35 +42,28 @@ h6 {
 /* Extra small devices like small phones */
 @media only screen and (max-width: 600px) {
     .hero-tile-text {
-        font-size: 100px;
+        font-size: 90px;
     }
 }
 
 /* Small devices like portrait tablets and landscape phones */
 @media only screen and (min-width: 600px) {
     .hero-tile-text {
-        font-size: 120px;
+        font-size: 110px;
     }
 }
 
 /* Medium devices like landscape tablets */
 @media only screen and (min-width: 768px) {
     .hero-tile-text {
-        font-size: 140px;
-    }
-}
-
-/* Medium devices like landscape tablets */
-@media only screen and (min-width: 992px) {
-    .hero-tile-text {
-        font-size: 160px;
+        font-size: 130px;
     }
 }
 
 /* Large devices such as laptops and desktops */
 @media only screen and (min-width: 992px) {
     .hero-tile-text {
-        font-size: 180px;
+        font-size: 160px;
     }
 }
 
