@@ -120,25 +120,6 @@
         transform: translate(50%, -50%);
     }
 
-    .hero-tile:hover:before {
-        -webkit-animation: criss-cross-left var(--tile-anim-speed) both;
-        -webkit-animation-direction: alternate;
-        animation: criss-cross-left var(--tile-anim-speed) both;
-        animation-direction: alternate;
-    }
-
-    .hero-tile:hover:after {
-        -webkit-animation: criss-cross-right var(--tile-anim-speed) both;
-        -webkit-animation-direction: alternate;
-        animation: criss-cross-right var(--tile-anim-speed) both;
-        animation-direction: alternate;
-    }
-
-    .hero-tile:hover, .hero-tile:active {
-        cursor: pointer;
-        z-index: 10;
-    }
-
 @media only screen and (max-width: 600px) {
     .hero-tile {
         height: 25vh !important;
@@ -167,12 +148,6 @@
 
         .hero-tile.letter-4 {
             top: 75vh;
-        }
-
-        .hero-tile:hover, .hero-tile:active {
-            top: 0;
-            width: 100%;
-            height: 100vh !important;
         }
 }
 
@@ -204,10 +179,76 @@
         .hero-tile.letter-4 {
             left: 75vw;
         }
+}
 
-        .hero-tile:hover, .hero-tile:active {
+@media (hover: none) {
+    @media only screen and (max-width: 600px) {
+        .hero-tile.active {
+            top: 0;
+            width: 100%;
+            height: 100vh !important;
+            cursor: pointer;
+            z-index: 10;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .hero-tile.active {
             left: 0;
             width: 100%;
             height: 60vh !important;
+            cursor: pointer;
+            z-index: 10;
         }
+    }        
+
+    .hero-tile.active:before {
+        -webkit-animation: criss-cross-left var(--tile-anim-speed) both;
+        -webkit-animation-direction: alternate;
+        animation: criss-cross-left var(--tile-anim-speed) both;
+        animation-direction: alternate;
+    }
+
+    .hero-tile.active:after {
+        -webkit-animation: criss-cross-right var(--tile-anim-speed) both;
+        -webkit-animation-direction: alternate;
+        animation: criss-cross-right var(--tile-anim-speed) both;
+        animation-direction: alternate;
+    }
+}
+
+@media (hover: hover) {
+    @media only screen and (max-width: 600px) {
+        .hero-tile:hover {
+            top: 0;
+            width: 100%;
+            height: 100vh !important;
+            cursor: pointer;
+            z-index: 10;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .hero-tile:hover {
+            left: 0;
+            width: 100%;
+            height: 60vh !important;
+            cursor: pointer;
+            z-index: 10;
+        }
+    }
+
+    .hero-tile:hover:before {
+        -webkit-animation: criss-cross-left var(--tile-anim-speed) both;
+        -webkit-animation-direction: alternate;
+        animation: criss-cross-left var(--tile-anim-speed) both;
+        animation-direction: alternate;
+    }
+
+    .hero-tile:hover:after {
+        -webkit-animation: criss-cross-right var(--tile-anim-speed) both;
+        -webkit-animation-direction: alternate;
+        animation: criss-cross-right var(--tile-anim-speed) both;
+        animation-direction: alternate;
+    }
 }

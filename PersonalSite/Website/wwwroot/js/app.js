@@ -21,25 +21,82 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 
 function initialiseHeroTileEvents() {
+    let hoverMediaQuery = window.matchMedia("(hover: hover)");
+
+    if (hoverMediaQuery.matches) {
+        setupHoverEvents();
+    } else {
+        setupTouchEvents();
+    }
+}
+
+function setupTouchEvents() {
     $('.hero-tile')
-        .mouseenter(function (e) {
+        .unbind()
+        .click(function () {
             let target = $(this);
-            let topBottomClass = (target.hasClass('first-word') ? 'first-word' : 'second-word');
 
-            $('.hero-tile.' + topBottomClass).each(function () {
+            $('.hero-tile').each(function () {
                 let loopTarget = $(this);
-
                 if (loopTarget.is(target) === false) {
-                    loopTarget.addClass('hide');
+                    if (loopTarget.hasClass('active')) {
+                        loopTarget.trigger('click');
+                    }
                 }
             });
+
+            if (target.hasClass('active')) {
+                target.removeClass('active');
+
+                onTileUnfocus();
+            } else {
+                target.addClass('active');
+
+                onTileFocus(target);
+            }
+        });
+}
+
+function setupHoverEvents() {
+    $('.hero-tile')
+        .unbind()
+        .mouseenter(function (e) {
+            let target = $(this);
+            onTileFocus(target);
         })
         .mouseleave(function (e) {
-            let topBottomClass = ($(this).hasClass('first-word') ? 'first-word' : 'second-word');
-            $('.hero-tile.' + topBottomClass).each(function () {
-                $(this).removeClass('hide');
-            });
+            onTileUnfocus();
         });
+}
+
+function onTileFocus(target) {
+    let screenSizeMediaQuery = window.matchMedia("only screen and (max-width: 600px)");
+
+    if (screenSizeMediaQuery.matches) {
+        $('.hero-tile').each(function () {
+            let loopTarget = $(this);
+
+            if (loopTarget.is(target) === false) {
+                loopTarget.addClass('hide');
+            }
+        });
+    } else {
+        let topBottomClass = (target.hasClass('first-word') ? 'first-word' : 'second-word');
+
+        $('.hero-tile.' + topBottomClass).each(function () {
+            let loopTarget = $(this);
+
+            if (loopTarget.is(target) === false) {
+                loopTarget.addClass('hide');
+            }
+        });
+    }
+}
+
+function onTileUnfocus() {
+    $('.hero-tile').each(function () {
+        $(this).removeClass('hide');
+    });
 }
 
 function setupHeroTiles() {
