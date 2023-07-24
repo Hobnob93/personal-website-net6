@@ -99,7 +99,23 @@ function onTileUnfocus() {
     });
 }
 
+function mediaQueryChanged() {
+    $('.hero-tile').each(function () {
+        let loopTarget = $(this);
+        if (loopTarget.hasClass('active')) {
+            loopTarget.trigger('click');
+        }
+    });
+
+    initialiseHeroTileEvents();
+}
+
 function setupHeroTiles() {
     randomlySizeHeroTiles();
     initialiseHeroTileEvents();
+
+    var hoverQuery = window.matchMedia("(hover: hover)");
+    var sizeQuery = window.matchMedia("only screen and (max-width: 600px)");
+    hoverQuery.addEventListener('change', () => mediaQueryChanged());
+    sizeQuery.addEventListener('change', () => mediaQueryChanged());
 }
