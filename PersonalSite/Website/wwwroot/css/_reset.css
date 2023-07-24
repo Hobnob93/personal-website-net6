@@ -1,0 +1,27 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+*:before, *:after {
+    z-index: -1;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1:focus,
+h2:focus
+h3:focus
+h4:focus
+h5:focus
+h6:focus {
+    outline: 0;
+}

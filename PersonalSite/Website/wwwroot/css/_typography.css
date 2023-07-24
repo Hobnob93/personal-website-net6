@@ -1,0 +1,75 @@
+﻿html, body {
+    font-family: 'Share Tech Mono', sans-serif;
+    color: var(--font-primary-color);
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+h4 {
+    font-size: var(--h4-size);
+}
+
+h5 {
+    font-size: var(--h5-size);
+}
+
+h6 {
+    font-size: var(--h6-size);
+}
+
+.hero-tile-text {
+    fill: transparent;
+    stroke: var(--font-primary-color);
+    stroke-width: 0.01em;
+    stroke-linejoin: round;
+    transition: stroke var(--tile-anim-speed) ease-in-out;
+}
+
+.hero-tile.hide .hero-tile-text {
+    stroke: transparent;
+}
+
+/* Extra small devices like small phones */
+@media only screen and (max-width: 600px) {
+    .hero-tile-text {
+        font-size: 90px;
+    }
+}
+
+/* Small devices like portrait tablets and landscape phones */
+@media only screen and (min-width: 600px) {
+    .hero-tile-text {
+        font-size: 110px;
+    }
+}
+
+/* Medium devices like landscape tablets */
+@media only screen and (min-width: 768px) {
+    .hero-tile-text {
+        font-size: 130px;
+    }
+}
+
+/* Large devices such as laptops and desktops */
+@media only screen and (min-width: 992px) {
+    .hero-tile-text {
+        font-size: 160px;
+    }
+}
+
+/* Extra large devices such as large laptops and desktops */
+@media only screen and (min-width: 1200px) {
+    .hero-tile-text {
+        font-size: 200px;
+    }
+}

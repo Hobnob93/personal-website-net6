@@ -1,0 +1,22 @@
+﻿.hero {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.h-100pc {
+    height: 100%;
+}

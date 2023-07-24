@@ -1,0 +1,21 @@
+﻿.mouse-cursor-gradient {
+    position: relative;
+}
+
+    .mouse-cursor-gradient:before {
+        --size: 0;
+        z-index: -9999;
+        content: '';
+        position: absolute;
+        left: var(--mouse-x);
+        top: var(--mouse-y);
+        width: var(--size);
+        height: var(--size);
+        background: radial-gradient(circle closest-side, var(--mouse-tracking-color), var(--background-color));
+        transform: translate(-50%, -50%);
+        transition: width 0.5s ease, height 0.2s ease;
+    }
+
+    .mouse-cursor-gradient:hover:before {
+        --size: 600px;
+    }

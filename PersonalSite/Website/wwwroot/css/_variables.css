@@ -1,0 +1,18 @@
+﻿:root {
+    --mouse-x: -1000;
+    --mouse-y: -1000;
+    --font-primary-color: #ffffffff;
+    --font-secondary-color: #5996e2;
+    --font-highlight-color: #8ac8a5;
+    --navbar-color: #27272f;
+    --background-color: #002020;
+    --mouse-tracking-color: #003333;
+    --tile-gb-color: #AACACA;
+    --tile-anim-speed: 0.75s;
+    --h1-size: 1.5rem;
+    --h2-size: 1.35rem;
+    --h3-size: 1.2rem;
+    --h4-size: 1.1rem;
+    --h5-size: 1.05rem;
+    --h6-size: 1.0rem;
+}

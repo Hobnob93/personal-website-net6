@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fluxor.Blazor.Web" Version="5.9.0" />
+    <PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="5.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Actions\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Features\" />
+    <Folder Include="States\" />
+    <Folder Include="Reducers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Website.Common\Website.Common.csproj" />
+  </ItemGroup>
+
+</Project>
