@@ -28,6 +28,10 @@ h6 {
 }
 
 .hero-tile-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
     fill: transparent;
     stroke: var(--font-primary-color);
     stroke-width: 0.01em;
