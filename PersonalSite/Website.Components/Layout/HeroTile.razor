@@ -3,6 +3,7 @@
 <div class="@Classes" @attributes="UserAttributes" style="@Style">
     <svg class="hero-tile-text" width="100%" height="100%">
         <text class="hero-tile-text-char" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">@Char</text>
+        <text class="hero-tile-text-bg" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">@Name.ToUpper()</text>
         <text class="hero-tile-text-name" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">@Name.ToUpper()</text>
     </svg>
     <img src="@ImagePath" alt="@ImageAlt" />

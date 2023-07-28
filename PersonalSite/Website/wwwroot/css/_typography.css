@@ -47,6 +47,11 @@ h6 {
     stroke: transparent;
 }
 
+.hero-tile-text-bg {
+    stroke: transparent;
+    stroke-width: 0.1em;
+}
+
 @media (hover:hover) {
     .hero-tile:hover .hero-tile-text .hero-tile-text-char {
         transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
@@ -56,6 +61,11 @@ h6 {
     .hero-tile:hover .hero-tile-text .hero-tile-text-name {
         transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
         stroke: var(--font-primary-color);
+    }
+
+    .hero-tile:hover .hero-tile-text .hero-tile-text-bg {
+        transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+        stroke: var(--tile-text-background-color);
     }
 }
 
@@ -68,6 +78,11 @@ h6 {
     .hero-tile.active .hero-tile-text .hero-tile-text-name {
         transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
         stroke: var(--font-primary-color);
+    }
+
+    .hero-tile.active .hero-tile-text .hero-tile-text-bg {
+        transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+        stroke: var(--tile-text-background-color);
     }
 }
 
