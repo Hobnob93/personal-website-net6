@@ -11,7 +11,10 @@ public partial class HeroTile : BaseComponent
     [Parameter, EditorRequired]
     public string Name { get; set; } = string.Empty;
 
-    private string ImagePath => $"/images/home/{Name}.png";
+    [Parameter]
+    public string ImageType { get; set; } = "png";
+
+    private string ImagePath => $"/images/home/{Name}.{ImageType}";
     private string ImageAlt => $"{Name} hero image";
 
     public string Classes => new ClassBuilder()
