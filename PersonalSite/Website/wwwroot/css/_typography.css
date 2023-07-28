@@ -43,6 +43,34 @@ h6 {
     stroke: transparent;
 }
 
+.hero-tile-text-name {
+    stroke: transparent;
+}
+
+@media (hover:hover) {
+    .hero-tile:hover .hero-tile-text .hero-tile-text-char {
+        transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+        stroke: transparent;
+    }
+
+    .hero-tile:hover .hero-tile-text .hero-tile-text-name {
+        transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+        stroke: var(--font-primary-color);
+    }
+}
+
+@media (hover:none) {
+    .hero-tile.active .hero-tile-text .hero-tile-text-char {
+        transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+        stroke: transparent;
+    }
+
+    .hero-tile.active .hero-tile-text .hero-tile-text-name {
+        transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+        stroke: var(--font-primary-color);
+    }
+}
+
 /* Extra small devices like small phones */
 @media only screen and (max-width: 600px) {
     .hero-tile-text {
