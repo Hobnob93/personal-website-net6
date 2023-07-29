@@ -5,6 +5,9 @@ namespace Website.Components.Layout;
 
 public partial class HeroTile : BaseComponent
 {
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+
     [Parameter, EditorRequired]
     public string Char { get; set; } = string.Empty;
 
@@ -21,4 +24,9 @@ public partial class HeroTile : BaseComponent
         .Add("hero-tile")
         .Add(Class!, condition: Class is not null)
         .Build();
+
+    private void OnClick()
+    {
+        NavigationManager.NavigateTo($"/{Name.ToLower()}");
+    }
 }
