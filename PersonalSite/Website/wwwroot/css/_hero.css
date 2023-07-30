@@ -131,6 +131,10 @@
         transform: translate(50%, -50%);
     }
 
+    .hero-tile button {
+        display: none;
+    }
+
 @media only screen and (max-width: 600px) {
     .hero-tile {
         height: 25vh !important;
@@ -219,6 +223,22 @@
         height: 100%;
         z-index: -12;
         transition: all var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+    }
+
+    .hero-tile.active button {
+        display: inline-block;
+        font-size: 3rem;
+        position: relative;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--font-secondary-color);
+        background: var(--tile-text-background-color);
+        border-width: 0.02em;
+        border-color: var(--font-secondary-color);
+        border-style: solid;
+        padding: 0.3em 0.5em;
+        z-index: 5;
     }
 
     .hero-tile.active:before {

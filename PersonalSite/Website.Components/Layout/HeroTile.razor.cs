@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.JSInterop;
 using Website.Components.Builders;
 
 namespace Website.Components.Layout;
@@ -7,6 +9,9 @@ public partial class HeroTile : BaseComponent
 {
     [Inject]
     private NavigationManager NavigationManager { get; set; } = default!;
+
+    [Inject]
+    private IJSRuntime JsInterop { get; set; } = default!;
 
     [Parameter, EditorRequired]
     public string Char { get; set; } = string.Empty;
@@ -25,8 +30,15 @@ public partial class HeroTile : BaseComponent
         .Add(Class!, condition: Class is not null)
         .Build();
 
-    private void OnClick()
+    private void OnButtonClicked()
     {
         NavigationManager.NavigateTo($"/{Name.ToLower()}");
+    }
+
+    private async Task OnDivClicked()
+    {
+        var allowClick = await JsInterop.InvokeAsync<bool>("blazor_tileClick");
+        if (allowClick)
+            OnButtonClicked();
     }
 }

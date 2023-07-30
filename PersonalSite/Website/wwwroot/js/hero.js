@@ -1,5 +1,3 @@
-
-
 function randomlySizeHeroTiles() {
     for (let i = 1; i <= 4; i++) {
         var top = document.querySelector('.hero-tile.first-word.letter-' + i);
@@ -25,6 +23,16 @@ function initialiseHeroTileEvents() {
     } else {
         setupTouchEvents();
     }
+}
+
+function blazor_tileClick() {
+    let hoverMediaQuery = window.matchMedia("(hover: hover)");
+
+    if (hoverMediaQuery.matches) {
+        return true;
+    }
+
+    return false;
 }
 
 function setupTouchEvents() {
