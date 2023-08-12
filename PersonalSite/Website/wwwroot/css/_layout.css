@@ -20,3 +20,42 @@
 .h-100pc {
     height: 100%;
 }
+
+.sticky {
+    position: sticky;
+}
+
+/* Extra small devices like small phones */
+@media only screen and (max-width: 600px) {
+    .xs-sticky {
+        position: sticky;
+    }
+}
+
+/* Small devices like portrait tablets and landscape phones */
+@media only screen and (min-width: 600px) {
+    .sm-sticky {
+        position: sticky;
+    }
+}
+
+/* Medium devices like landscape tablets */
+@media only screen and (min-width: 768px) {
+    .md-sticky {
+        position: sticky;
+    }
+}
+
+/* Large devices such as laptops and desktops */
+@media only screen and (min-width: 992px) {
+    .lg-sticky {
+        position: sticky;
+    }
+}
+
+/* Extra large devices such as large laptops and desktops */
+@media only screen and (min-width: 1200px) {
+    .xl-sticky {
+        position: sticky;
+    }
+}
