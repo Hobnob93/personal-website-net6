@@ -15,14 +15,10 @@ public struct ClassBuilder
 
     public ClassBuilder(string classes) : this()
     {
+        classes = classes.Trim();
         if (classes.Length > 0)
         {
-            _stringBuilder.Append(classes);
-
-            if (classes.Last() != SeparatorChar)
-            {
-                _stringBuilder.Append(SeparatorChar);
-            }
+            Append(classes);
         }
     }
 
@@ -45,10 +41,39 @@ public struct ClassBuilder
         return this;
     }
 
-    public ClassBuilder Add(string value, Func<bool> condition)
+    public ClassBuilder Add(Func<string> value, bool condition)
     {
-        if (condition())
+        if (condition)
+            Append(value());
+
+        return this;
+    }
+
+    public ClassBuilder Add(string[] values, bool condition)
+    {
+        if (condition)
+        {
+            foreach (var value in values)
+            {
+                Append(value);
+            }
+        }
+
+        return this;
+    }
+
+    public ClassBuilder Add(string value, Func<bool> when)
+    {
+        if (when())
             Append(value);
+
+        return this;
+    }
+
+    public ClassBuilder Add(Func<string> value, Func<bool> when)
+    {
+        if (when())
+            Append(value());
 
         return this;
     }

@@ -21,6 +21,58 @@
     height: 100%;
 }
 
+.h-100vh {
+    height: 100vh;
+}
+
+.w-100pc {
+    width: 100%;
+}
+
+.w-100vw {
+    width: 100vw;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-flex-start {
+    justify-content: flex-start;
+}
+
+.jc-start {
+    justify-content: start;
+}
+
+.jc-flex-end {
+    justify-content: flex-end;
+}
+
+.jc-end {
+    justify-content: end;
+}
+
+.jc-normal {
+    justify-content: normal;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+.jc-stretch {
+    justify-content: stretch;
+}
+
 .sticky {
     position: sticky;
 }
@@ -36,6 +88,7 @@ nav .icon {
     height: 2.5rem;
     margin-left: 1rem;
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 
 /* Extra small devices like small phones */
