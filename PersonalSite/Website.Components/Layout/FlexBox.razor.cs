@@ -5,7 +5,7 @@ using Website.Components.Extensions;
 
 namespace Website.Components.Layout;
 
-public partial class FlexBox : BaseComponent
+public partial class FlexBox : BaseSiteComponent
 {
     [Parameter, EditorRequired]
     public RenderFragment ChildContent { get; set; } = default!;

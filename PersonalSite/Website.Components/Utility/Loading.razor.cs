@@ -2,7 +2,7 @@
 
 namespace Website.Components.Utility;
 
-public partial class Loading : BaseComponent
+public partial class Loading : BaseSiteComponent
 {
     public string Classes => new ClassBuilder()
         .Add("loading-content")

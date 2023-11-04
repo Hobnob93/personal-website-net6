@@ -4,7 +4,7 @@ using Website.Components.Builders;
 
 namespace Website.Components.Layout;
 
-public partial class Hero : BaseComponent
+public partial class TileSection : BaseSiteComponent
 {
     [Inject]
     private IJSRuntime JsRuntime { get; set; } = default!;

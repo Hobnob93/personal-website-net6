@@ -5,7 +5,7 @@ using Website.Components.Builders;
 
 namespace Website.Components.Layout;
 
-public partial class HeroTile : BaseComponent
+public partial class Tile : BaseSiteComponent
 {
     [Inject]
     private NavigationManager NavigationManager { get; set; } = default!;
