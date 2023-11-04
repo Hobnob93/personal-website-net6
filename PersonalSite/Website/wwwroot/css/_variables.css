@@ -6,9 +6,10 @@
     --font-highlight-color: #8ac8a5;
     --navbar-color: #AACACA;
     --navbar-height: 56px;
-    --background-color: #002020;
+    --background-color: #001515;
+    --background-color-2: #003535;
     --tile-text-background-color: #002020BB;
-    --mouse-tracking-color: #003333;
+    --mouse-tracking-color: #004545FF;
     --tile-gb-color: #AACACA;
     --tile-anim-speed: 0.75s;
     --tile-anim-quart-speed: 0.1875s;

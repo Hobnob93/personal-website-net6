@@ -8,5 +8,6 @@
 @import "_layout.css";
 
 body {
-    background-color: var(--background-color);
+    /*background-color: var(--background-color);*/
+    background: linear-gradient(0.15turn, var(--background-color), var(--background-color-2), var(--background-color));
 }
