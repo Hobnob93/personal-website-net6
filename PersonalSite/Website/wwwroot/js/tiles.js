@@ -1,13 +1,13 @@
-function randomlySizeHeroTiles() {
+function randomlySizeTiles() {
     for (let i = 1; i <= 4; i++) {
-        var top = document.querySelector('.hero-tile.first-word.letter-' + i);
-        var bottom = document.querySelector('.hero-tile.second-word.letter-' + i);
+        var top = document.querySelector('.tile.first-word.letter-' + i);
+        var bottom = document.querySelector('.tile.second-word.letter-' + i);
 
         var topHeight = randomIntFromInterval(41, 59);
         var bottomHeight = 100 - topHeight;
 
-        top.style.setProperty('--hero-tile-height', topHeight + 'vh');
-        bottom.style.setProperty('--hero-tile-height', bottomHeight + 'vh');
+        top.style.setProperty('--tile-height', topHeight + 'vh');
+        bottom.style.setProperty('--tile-height', bottomHeight + 'vh');
     }
 }
 
@@ -15,7 +15,7 @@ function randomIntFromInterval(min, max) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function initialiseHeroTileEvents() {
+function initialiseTileEvents() {
     let hoverMediaQuery = window.matchMedia("(hover: hover)");
 
     if (hoverMediaQuery.matches) {
@@ -36,12 +36,12 @@ function blazor_tileClick() {
 }
 
 function setupTouchEvents() {
-    $('.hero-tile')
+    $('.tile')
         .unbind()
         .click(function () {
             let target = $(this);
 
-            $('.hero-tile').each(function () {
+            $('.tile').each(function () {
                 let loopTarget = $(this);
                 if (loopTarget.is(target) === false) {
                     if (loopTarget.hasClass('active')) {
@@ -63,7 +63,7 @@ function setupTouchEvents() {
 }
 
 function setupHoverEvents() {
-    $('.hero-tile')
+    $('.tile')
         .unbind()
         .mouseenter(function (e) {
             let target = $(this);
@@ -78,7 +78,7 @@ function onTileFocus(target) {
     let screenSizeMediaQuery = window.matchMedia("only screen and (max-width: 600px)");
 
     if (screenSizeMediaQuery.matches) {
-        $('.hero-tile').each(function () {
+        $('.tile').each(function () {
             let loopTarget = $(this);
 
             if (loopTarget.is(target) === false) {
@@ -88,7 +88,7 @@ function onTileFocus(target) {
     } else {
         let topBottomClass = (target.hasClass('first-word') ? 'first-word' : 'second-word');
 
-        $('.hero-tile.' + topBottomClass).each(function () {
+        $('.tile.' + topBottomClass).each(function () {
             let loopTarget = $(this);
 
             if (loopTarget.is(target) === false) {
@@ -99,25 +99,25 @@ function onTileFocus(target) {
 }
 
 function onTileUnfocus() {
-    $('.hero-tile').each(function () {
+    $('.tile').each(function () {
         $(this).removeClass('hide');
     });
 }
 
 function mediaQueryChanged() {
-    $('.hero-tile').each(function () {
+    $('.tile').each(function () {
         let loopTarget = $(this);
         if (loopTarget.hasClass('active')) {
             loopTarget.trigger('click');
         }
     });
 
-    initialiseHeroTileEvents();
+    initialiseTileEvents();
 }
 
-function setupHeroTiles() {
-    randomlySizeHeroTiles();
-    initialiseHeroTileEvents();
+function setupTiles() {
+    randomlySizeTiles();
+    initialiseTileEvents();
 
     var hoverQuery = window.matchMedia("(hover: hover)");
     var sizeQuery = window.matchMedia("only screen and (max-width: 600px)");

@@ -13,7 +13,7 @@ public partial class TileSection : BaseSiteComponent
     public RenderFragment ChildContent { get; set; } = default!;
 
     public string Classes => new ClassBuilder()
-        .Add("hero")
+        .Add("tileSection")
         .Add(Class!, condition: Class is not null)
         .Build();
 
@@ -23,7 +23,7 @@ public partial class TileSection : BaseSiteComponent
 
         if (firstRender)
         {
-            await JsRuntime.InvokeVoidAsync("setupHeroTiles");
+            await JsRuntime.InvokeVoidAsync("setupTiles");
         }
     }
 }

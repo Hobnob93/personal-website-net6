@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using Website.Components.Builders;
 
@@ -23,10 +22,10 @@ public partial class Tile : BaseSiteComponent
     public string ImageType { get; set; } = "png";
 
     private string ImagePath => $"/images/home/{Name}.{ImageType}";
-    private string ImageAlt => $"{Name} hero image";
+    private string ImageAlt => $"{Name} tile image";
 
     public string Classes => new ClassBuilder()
-        .Add("hero-tile")
+        .Add("tile")
         .Add(Class!, condition: Class is not null)
         .Build();
 
