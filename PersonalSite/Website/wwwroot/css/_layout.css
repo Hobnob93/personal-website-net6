@@ -19,6 +19,14 @@ section.hero .header {
     opacity: 0;
 }
 
+section:not(hero) {
+    height: 500px;
+}
+
+section:not(.hero):nth-of-type(even) {
+    background-color: var(--section-background-color);
+}
+
 .d-flex {
     display: flex;
     flex-direction: row;
