@@ -39,6 +39,17 @@ h6 {
     transition: stroke var(--tile-anim-speed) ease-in-out;
 }
 
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    fill: transparent;
+    stroke-width: 0.01em;
+    stroke-linejoin: round;
+    transition: stroke var(--tile-anim-speed) ease-in-out;
+}
+
 .tile.hide .tile-text {
     stroke: transparent;
 }
@@ -49,6 +60,17 @@ h6 {
 
 .tile-text-bg {
     stroke: transparent;
+    stroke-width: 0.1em;
+}
+
+.hero-text-name {
+    transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+    stroke: var(--font-primary-color);
+}
+
+.hero-text-bg {
+    transition: stroke var(--tile-anim-speed) ease-in-out var(--tile-anim-quart-speed);
+    stroke: var(--tile-text-background-color);
     stroke-width: 0.1em;
 }
 
@@ -88,35 +110,35 @@ h6 {
 
 /* Extra small devices like small phones */
 @media only screen and (max-width: 600px) {
-    .tile-text {
+    .tile-text, .hero-text {
         font-size: 90px;
     }
 }
 
 /* Small devices like portrait tablets and landscape phones */
 @media only screen and (min-width: 600px) {
-    .tile-text {
+    .tile-text, .hero-text {
         font-size: 110px;
     }
 }
 
 /* Medium devices like landscape tablets */
 @media only screen and (min-width: 768px) {
-    .tile-text {
+    .tile-text, .hero-text {
         font-size: 130px;
     }
 }
 
 /* Large devices such as laptops and desktops */
 @media only screen and (min-width: 992px) {
-    .tile-text {
+    .tile-text, .hero-text {
         font-size: 160px;
     }
 }
 
 /* Extra large devices such as large laptops and desktops */
 @media only screen and (min-width: 1200px) {
-    .tile-text {
+    .tile-text, .hero-text {
         font-size: 200px;
     }
 }

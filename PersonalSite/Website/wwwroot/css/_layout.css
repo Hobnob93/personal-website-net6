@@ -4,9 +4,19 @@
 }
 
 section.hero {
-    height: calc(100% - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height));
     background-size: cover !important;
     background-position: center !important;
+}
+
+section.hero .header {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    text-align: center;
+    opacity: 0;
 }
 
 .d-flex {
